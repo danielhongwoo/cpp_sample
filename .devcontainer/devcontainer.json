@@ -19,6 +19,9 @@
       ]
     }
   },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/developer/.ssh,type=bind"
+  ],
   "workspaceMount": "source=${localWorkspaceFolder},target=/work/cpp_sample,type=bind",
   "workspaceFolder": "/work/cpp_sample"
 }
