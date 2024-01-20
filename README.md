@@ -34,3 +34,8 @@
     * VSCode - Terminal - Run Task - cmake: clean
 
 
+## Code Quality Practices
+### clang-format
+```
+    find . -name '*.cpp' -o -name '*.hpp' | xargs clang-format -i
+```

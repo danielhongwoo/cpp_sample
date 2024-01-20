@@ -13,9 +13,7 @@ FetchContent_Declare(
 set(BUILD_SHARED_LIBS ON)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(sample main.cpp add.cpp)
-target_include_directories(sample PUBLIC ${EXTERNAL_SOURCE_DIR})
-
 enable_testing()
-add_executable(unit_test test.cpp add.cpp)
-target_link_libraries(unit_test gtest gtest_main gmock gmock_main)
+
+add_subdirectory(src)
+add_subdirectory(tests)
