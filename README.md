@@ -39,3 +39,8 @@
 ```
     find . -name '*.cpp' -o -name '*.hpp' | xargs clang-format -i
 ```
+### pre-commit
+```
+    pre-commit install  # for install pre-commit
+    pre-commit uninstall # for uninstall pre-commit
+```
