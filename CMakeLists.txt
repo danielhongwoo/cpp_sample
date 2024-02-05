@@ -20,3 +20,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_subdirectory(src)
 add_subdirectory(tests)
+
+set(CLANG_TIDY_COMMAND clang-tidy)
+file(GLOB_RECURSE ALL_SOURCE_FILES 
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp)
+
+add_custom_target(clang-tidy
+    COMMAND ${CLANG_TIDY_COMMAND} -p ${CMAKE_BINARY_DIR} ${ALL_SOURCE_FILES}
+)
