@@ -15,5 +15,8 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+# Set the output directory for all executables to the root of the build directory.
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
 add_subdirectory(src)
 add_subdirectory(tests)
